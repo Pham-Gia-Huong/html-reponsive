@@ -1,0 +1,24 @@
+.header-content {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h1 {
+    color: white;
+  }
+  .btn-full {
+    background: #e67e22;
+    color: white;
+    &:hover {
+      background: #cf6d17;
+    }
+  }
+  .btn-ghost {
+    color: #e67e22;
+    &:hover {
+      background: #cf6d17;
+      color: white;
+    }
+  }
+}

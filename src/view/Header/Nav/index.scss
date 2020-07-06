@@ -1,0 +1,26 @@
+nav {
+  .logo {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+  }
+  .main-nav {
+    float: right;
+    margin-top: 50px;
+    li {
+      display: inline-block;
+      margin-left: 40px;
+      a {
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.2s;
+        padding: 8px 0px;
+        font-size: 90%;
+        text-transform: uppercase;
+
+        &:hover {
+          border-bottom: 2px solid #cf6d17;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "esm",
+    "module": "commonjs",
+    "paths": {
+      "components": ["src/components"]
+    },
+    "target": "es6",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": false,
+    "declaration": true,
+    "types": ["react"]
+  },
+
+  "include": ["src/**/*.tsx"],
+  "exclude": ["node_modules", "esm"]
+}
