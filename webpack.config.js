@@ -18,12 +18,12 @@ module.exports = (env = {}) => {
     module: {
       rules: [
         {
-          test: /\.(tsx|jsx)$/,
+          test: /\.(tsx|jsx|ts)$/,
           use: 'babel-loader',
           exclude: /node_modules/,
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.(s[ac]ss|css)$/i,
           use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
@@ -65,8 +65,9 @@ module.exports = (env = {}) => {
       new CopyPlugin({
         patterns: [
           // {from: path.resolve('public/fonts/**/*'), to: 'dist/font'},
-          {from: path.resolve('public/image'), to: 'image'},
-
+          {from: path.resolve(__dirname, 'public/image'), to: 'image'},
+          {from: path.resolve(__dirname, 'public/lib'), to: 'lib'},
+          {from: path.resolve(__dirname, 'public/fonts'), to: 'fonts'},
           {from: path.resolve('public/html/index.html'), to: '../esm/html'},
         ],
       }),
