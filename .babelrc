@@ -1,7 +1,23 @@
 {
   "presets": [
-    ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": "3"}],
-    "@babel/preset-react",
-    "@babel/preset-typescript"
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": "3",
+        "targets": {
+          "browsers": ["last 1 version,> 1%,maintained node versions,not dead"]
+        }
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-classes"
+    // "transform-commonjs"
   ]
 }

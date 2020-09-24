@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 
 const appName = 'reponsive';
 
@@ -20,6 +23,7 @@ module.exports = (env = {}) => {
         {
           test: /\.(tsx|jsx|ts)$/,
           use: 'babel-loader',
+          // exclude: /node_modules(\/|\\)(?!(pdfjs-dist)(\/|\\)).*/,
           exclude: /node_modules/,
         },
         {
@@ -37,6 +41,10 @@ module.exports = (env = {}) => {
             },
           ],
         },
+        {
+          test: /\.(s[ac]ss|css)$/i,
+          use: [MiniCssExtractPlugin.loader, 'css-loader','sass-loader'],
+        },
       ],
     },
     devtool: 'inline-source-map',
@@ -49,6 +57,14 @@ module.exports = (env = {}) => {
 
     optimization: {
       usedExports: true,
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: env.mode === 'development'
+      }),
+      ],
     },
 
     resolve: {
@@ -61,6 +77,9 @@ module.exports = (env = {}) => {
       new HtmlWebPackPlugin({
         template: './public/html/index.html',
         filename: 'index.html',
+      }),
+      new MiniCssExtractPlugin({
+        filename: './dist/[name].min.css',
       }),
       new CopyPlugin({
         patterns: [

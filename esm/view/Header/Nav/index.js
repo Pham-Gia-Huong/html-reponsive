@@ -1,23 +1,21 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = require("react");
-require("./index.scss");
-const Navigation = () => {
-    return (react_1.default.createElement("nav", null,
-        react_1.default.createElement("div", { className: "row" },
-            react_1.default.createElement("img", { className: "logo", src: 'image/logo-white.png', alt: "hero image" }),
-            react_1.default.createElement("ul", { className: "main-nav" },
-                react_1.default.createElement("li", null,
-                    react_1.default.createElement("a", { href: "#" }, "Food delivery")),
-                react_1.default.createElement("li", null,
-                    react_1.default.createElement("a", { href: "#" }, "How it works"),
+import React from 'react';
+import './index.scss';
+var Navigation = function () {
+    return (React.createElement("nav", null,
+        React.createElement("div", { className: "row" },
+            React.createElement("img", { className: "logo", src: 'image/logo-white.png', alt: "hero image" }),
+            React.createElement("ul", { className: "main-nav" },
+                React.createElement("li", null,
+                    React.createElement("a", { href: "#" }, "Food delivery")),
+                React.createElement("li", null,
+                    React.createElement("a", { href: "#" }, "How it works"),
                     ' '),
-                react_1.default.createElement("li", null,
-                    react_1.default.createElement("a", { href: "#" }, "Our cities"),
+                React.createElement("li", null,
+                    React.createElement("a", { href: "#" }, "Our cities"),
                     ' '),
-                react_1.default.createElement("li", null,
-                    react_1.default.createElement("a", { href: "#" }, "Sign up"),
+                React.createElement("li", null,
+                    React.createElement("a", { href: "#" }, "Sign up"),
                     ' ')))));
 };
-exports.default = Navigation;
+export default Navigation;
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import {Button} from 'src/components';
+import {Button} from 'components';
 const Content = () => {
   return (
     <div className="header-content">

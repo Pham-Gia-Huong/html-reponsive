@@ -1,16 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = require("react");
-require("./index.scss");
-const components_1 = require("components");
-const Content = () => {
-    return (react_1.default.createElement("div", { className: "header-content" },
-        react_1.default.createElement("h1", null,
+import React from 'react';
+import './index.scss';
+import { Button } from 'components';
+var Content = function () {
+    return (React.createElement("div", { className: "header-content" },
+        React.createElement("h1", null,
             "Goodbye junk food.",
-            react_1.default.createElement("br", null),
+            React.createElement("br", null),
             " Hello super healthy meals."),
-        react_1.default.createElement(components_1.Button, { text: 'I’m hungry', className: "btn-full" }),
-        react_1.default.createElement(components_1.Button, { text: 'Show me more', className: "btn-ghost" })));
+        React.createElement(Button, { text: 'I’m hungry', className: "btn-full" }),
+        React.createElement(Button, { text: 'Show me more', className: "btn-ghost" })));
 };
-exports.default = Content;
+export default Content;
 //# sourceMappingURL=index.js.map
